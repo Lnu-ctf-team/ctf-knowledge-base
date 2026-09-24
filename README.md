@@ -1,113 +1,50 @@
-<div align="center">
+# CTF Knowledge Base
 
-<a href="https://ctf-wiki.org/static/img/logo.png" target="_blank"><img src="https://ctf-wiki.org/static/img/logo.png" width="128" height="128"></a>
+本项目是基于 [CTF Wiki](https://github.com/ctf-wiki/ctf-wiki) 的内容与结构进行整理、扩展和二次维护的。
 
-# CTF Wiki
+我们希望通过这个仓库记录团队在 CTF 学习与比赛过程中积累的知识、经验、题解、工具使用方法等。
 
-<p align="center">
+## 项目定位
 
-Come and join us, we need you!
+本项目与上游 CTF Wiki 的目标并不完全相同。
 
-[![](https://img.shields.io/discord/1115906685450596435?style=for-the-badge&color=%237289DA&label=Discord&logo=discord&logoColor=white")](https://discord.gg/ekv7WDa9pq)  [![](https://img.shields.io/github/stars/CTF-Wiki/CTF-Wiki?style=for-the-badge&color=black&label=Stars&logo=github&logoColor=white")](https://github.com/CTF-Wiki/CTF-Wiki/stargazers)
+CTF Wiki 为我们提供了一个非常好的知识基础，而本项目更侧重于：
 
-</p>
+* 对已有知识进行补充、细化和重新组织
+* 记录团队自己的学习笔记与实践经验
+* 记录 CTF 比赛中的题解、复盘与经验总结
+* 整理团队使用的工具、脚本和工作流
+* 记录一些尚未完善的实验性内容
+* 根据团队成员的实际学习过程补充适合初学者的内容
 
-</div>
+因此，本仓库中的内容并不都具有相同的成熟度，有些内容可能只是团队成员在学习过程中留下的笔记。
 
-## Introduction
+## 与 CTF Wiki 的关系
 
-[中文](./README-zh_CN.md)  [English](./README.md)
+本项目基于 CTF Wiki，并在其基础上进行修改和扩展。
 
-Welcome to **CTF Wiki**！
+* Upstream: https://github.com/ctf-wiki/ctf-wiki
 
-**CTF** (Capture The Flag) started from **DEFCON CTF**, a competitive game among computer security enthusiasts, originally hosted in 1996.
+本项目是**独立维护的衍生版本**，不属于 CTF Wiki 官方项目。
 
-**CTF** covers a wide range of fields. Along with the evolving security technology, the difficulty of **CTF** challenges is getting harder and harder. As a result, the learning curve for beginners is getting steeper. Most online information is scattered and trivial. Beginners often don't know how to systematically learn **CTF**, which requires a lot of work and effort.
+除非特别注明，本仓库中的新增内容、团队笔记、工作流和实践经验均由本团队维护。
 
-In order to let those people who are interested in **CTF**s start easily, in October 2016, **CTF Wiki** was established on Github. Along with gradually improved content over time, **CTF Wiki** has received lots of appreciation from security enthusiasts, many of those are guys that we think we would never meet.
+对于来源于 CTF Wiki 的内容，我们会尽可能保留原有署名、许可证及来源信息，并在此基础上进行修改、补充或重新组织。
 
-As a freedom site, primarily focusing on recent CTFs, **CTF Wiki** introduces the knowledge and techniques in all aspects of **CTF** to make it easier for beginners to learn **CTF**.
+**本项目与 CTF Wiki 不存在隶属、合作、授权或背书关系。**
 
-Now, **CTF Wiki** mainly contains the basic skills for **CTF**, but we are working hard to improve the following contents.
+## Contribution
 
-- Advanced skills used in CTF
-- Special topics appearing in CTF
+本项目主要服务于本团队的长期知识积累，因此仓库的内容组织方式和维护方式由团队自行决定。
 
-For the above-mentioned parts to be improved, please refer to [Projects](https://github.com/ctf-wiki/ctf-wiki/projects) which details what are planned.
+外部用户可以阅读、参考和提出 Issue。
 
-Although now **CTF Wiki** mainly focus **CTF**, it is not strictly limited to **CTF** topics. In the future, **CTF Wiki** will include
+对于团队外部的修改，我们会根据实际情况决定是否采纳。
 
-- Tools used in security research
-- Increased discussion of security in the world
+本项目中的内容也不要求与 CTF Wiki 上游保持完全同步；我们会根据团队需求决定同步、修改或舍弃上游内容。
 
-In addition, given the following two points
+## License
 
-- Information about technology should be openly shared.
-- As new techniques are always being developed, old techniques will start to fade over time and they should be replaced with new techniques.
+本项目中来源于 CTF Wiki 的内容遵循其原有许可证及相关要求。
 
-Therefore, **CTF Wiki** will never publish books.
-
-Finally, originating from the community, as an independent organization, **CTF Wiki** advocates **freedom of knowledge**, will **never be commercialized**, and will always maintain the character of **independence and freedom**.
-
-## How to build？
-
-CTF Wiki uses [mkdocs](https://github.com/mkdocs/mkdocs) to show its contents. And it is deployed at [https://ctf-wiki.org](https://ctf-wiki.org).
-
-It can also be deployed locally, with the following steps:
-
-```shell
-# 1. clone
-git clone https://github.com/ctf-wiki/ctf-wiki.git
-# 2. requirements
-pip install -r requirements.txt
-# generate static file in site/
-python3 scripts/docs.py build-all
-# deploy at http://127.0.0.1:8008
-python3 scripts/docs.py serve
-```
-
-**A local instance of mkdocs is dynamically updated, for instance when a markdown file is modified, the corresponding page will be modified too.**
-
-If you just want to view it statically, try Docker!
-
-```
-docker run -d --name=ctf-wiki -p 4100:80 ctfwiki/ctf-wiki
-```
-And then access [http://localhost:4100/](http://localhost:4100/) .
-
-## How to practice？
-
-Firstly, learn some basic security knowledge through online reading.
-
-Secondly, CTF Wiki has two sister projects.
-
-- All of the challenges that are mentioned are in the [ctf-challenges](https://github.com/ctf-wiki/ctf-challenges) repository, you can locate them with their corresponding category.
-- The tools mentioned in the CTF Wiki are constantly added to the [ctf-tools](https://github.com/ctf-wiki/ctf-tools) repository.
-
-## How to make CTF Wiki Better？
-
-We welcome to write content for the wiki and share what you have learned. 
-
-**Before you decide to contribute content, please read [CONTRIBUTING](https://ctf-wiki.org/en/contribute/before-contributing/)**.
-
-Thank you to all the people who have already contributed to CTF Wiki.
-
-<a href="https://github.com/ctf-wiki/ctf-wiki/graphs/contributors"><img src="https://contrib.rocks/image?repo=ctf-wiki/ctf-wiki" /></a>
-
-## What can you get?
-
-- Ability to learn new things quickly
-- Different ways of thinking
-- A love for solving problems
-- Interesting security techniques
-- Memorable and enriching experience
-
-Before reading the Wiki, we hope to give you some advice:
-
-- Learn to ask [smart-questions](http://www.catb.org/~esr/faqs/smart-questions.html) .
-- Learn to use Google Search for self-improvement.
-- Be good at least one programming language, such as Python.
-- Practice is the most important learning tool.
-- Maintain the passions and desire to learn about new techniques.
-
-The security circle is small and the areas of exploration is vast. Let's get started with **CTF Wiki**!
+详见 [`LICENSE`](./LICENSE)。

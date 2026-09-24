@@ -1,0 +1,11 @@
+{% if page and page.file %}
+  {% if config.extra.custom_editor_url %}
+    <a href="{{ config.extra.custom_editor_url }}docs/{{ page.file.src_path }}" title="编辑此页" class="md-content__button md-icon">
+      {% include ".icons/material/pencil.svg" %}
+    </a>
+  {% else %}
+    <a href="{{ page.edit_url }}" title="编辑此页" class="md-content__button md-icon">
+      {% include ".icons/material/pencil.svg" %}
+    </a>
+  {% endif %}
+{% endif %}
