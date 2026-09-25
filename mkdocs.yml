@@ -25,6 +25,7 @@ theme:
     code: Source Code Pro
 plugins:
 - search
+- graph
 - minify:
     minify_html: true
 nav:
