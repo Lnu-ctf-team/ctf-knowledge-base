@@ -26,6 +26,8 @@ theme:
 plugins:
 - search
 - graph
+- roamlinks:
+    ignore_codeblocks: true
 - gen_nav:
     enabled: true
 - minify:
