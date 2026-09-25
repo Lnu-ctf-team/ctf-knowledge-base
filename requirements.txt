@@ -5,3 +5,4 @@ pymdown-extensions
 typer
 mkdocs-minify-plugin
 mkdocs-network-graph-plugin
+mkdocs-gen-nav-plugin
